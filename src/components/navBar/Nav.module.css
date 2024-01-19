@@ -1,0 +1,29 @@
+/* nav tag edited in global.css */
+
+.nav_title_logo {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    align-items: center;
+    column-gap: 20px;
+
+    .nav_title {
+        display: flex;
+        flex-direction: column;
+        color: #FDFDFD;
+        font-size: 20px;
+    }
+    .nav_logo {
+        width: 40px;
+        height: auto;
+        opacity: 0.8;
+    }
+}
+
+.nav_menu {
+    width: 54%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #FDFDFD
+}
