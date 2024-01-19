@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <main>
       <div className={styles.hero_container}>
-        <Image alt='hero image' src={HeroImg} width={1600} height={1100} className={styles.hero_img} priority />
+        <Image alt='hero image' src={HeroImg} width={809} height={353} className={styles.hero_img} priority />
         <div className={styles.hero_overlay} />
       </div>
       {data.map((item: any, index: number) => (
