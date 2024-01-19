@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
+import Head from 'next/head';
 import NavBar from '@/components/navBar/NavBar';
 import { FontProvider } from '@/lib/context/FontContext';
 import './globals.css'
 
 const favicon = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}logos-inp/inp-logo.png`
 
-export const generateViewport = 'width=device-width, initial-scale=1.0, maximum-scale=1.0';
+export const generateViewport = () => 'width=device-width, initial-scale=1.0, maximum-scale=1.0';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://localhost:3000'),
@@ -43,6 +44,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <FontProvider>
+      <Head>
+          <meta name="viewport" content={generateViewport()} />
+        </Head>
         <body>
           <header>
             <NavBar />
