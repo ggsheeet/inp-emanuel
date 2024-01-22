@@ -25,5 +25,30 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-    color: #FDFDFD
+    color: #FDFDFD;
+
+    a:first-child {
+        display: inline;
+        border: 0;
+        border-radius: 0;
+    
+        &:hover {
+          color: #FDFDFD;
+          background-color: transparent;
+      }
+      }
+    
+      a {
+        display: inline;
+        border: 2px solid #FDFDFD;
+        border-radius: 12px;
+        padding: 6px 10px;
+        transition: 0.5s;
+    
+        &:hover {
+          color: #2B2E32;
+          color: rgba(0, 0, 0, 0.5);
+          background-color: #FDFDFD;
+        }
+      }
 }

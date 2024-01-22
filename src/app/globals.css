@@ -32,17 +32,4 @@ nav {
   width: 100%;
   padding: 20px 40px;
   z-index: 3;
-
-  a:first-child {
-    display: inline;
-    border: 0;
-    border-radius: 0;
-  }
-
-  a {
-    display: inline;
-    border: 2px solid #FDFDFD;
-    border-radius: 12px;
-    padding: 6px 10px 
-  }
 }
