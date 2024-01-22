@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import NavBar from '@/components/navBar/NavBar'
 import { getBlogPosts } from '@/lib/contentful/contentful'
 import styles from './Home.module.css'
 
