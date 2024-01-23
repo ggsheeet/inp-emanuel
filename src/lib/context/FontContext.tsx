@@ -1,11 +1,7 @@
 'use client'
 import React, { createContext, useContext } from 'react';
 import { Raleway, Frank_Ruhl_Libre } from 'next/font/google';
-
-interface FontContextProps {
-  rale: ReturnType<typeof Raleway>;
-  ruhl: ReturnType<typeof Frank_Ruhl_Libre>;
-}
+import { FontContextProps, FontProviderProps } from '@/types/Types';
 
 const raleFont = Raleway({ subsets: ['latin'] });
 const ruhlFont = Frank_Ruhl_Libre({ subsets: ['latin'] });
@@ -19,10 +15,6 @@ export const useFontContext = () => {
   }
   return context;
 };
-
-interface FontProviderProps {
-  children: React.ReactNode;
-}
 
 export const FontProvider: React.FC<FontProviderProps> = ({ children }) => {
   const contextValue: FontContextProps = {

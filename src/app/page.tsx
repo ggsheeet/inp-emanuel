@@ -1,17 +1,12 @@
-import Image from 'next/image'
+import HeroMain from '@/components/heroMain/HeroMain'
 import { getBlogPosts } from '@/lib/contentful/contentful'
-import styles from './Home.module.css'
 
 export default async function Home() {
   const data = await getBlogPosts()
-  const HeroImg = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}images-inp/inp-church.jpeg`
 
   return (
     <main>
-      <div className={styles.hero_container}>
-        <Image alt='hero image' src={HeroImg} width={809} height={353} className={styles.hero_img} priority />
-        <div className={styles.hero_overlay} />
-      </div>
+      <HeroMain />
       {data.map((item: any, index: number) => (
         <p key={index}>
           {item.fields.title}

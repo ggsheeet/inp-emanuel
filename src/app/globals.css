@@ -24,12 +24,17 @@ body {
 }
 
 nav {
-  position: absolute;
   display: flex;
+  position: absolute;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 40px;
+  background-color: rgb(43, 46, 50, 0.7); /* #2B2E32 */
+  padding: 16px 40px;
   z-index: 3;
+}
+
+.nav_alt {
+  background-color: #2B2E32;
 }
