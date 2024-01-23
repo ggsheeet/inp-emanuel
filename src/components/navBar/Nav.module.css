@@ -48,7 +48,7 @@
         &:hover {
             border: 2px solid #FDFDFD;
             color: #FDFDFD;
-            background-color: #2B2E32;
+            background-color: rgb(43, 46, 50, 0.1);
         }
     }
 

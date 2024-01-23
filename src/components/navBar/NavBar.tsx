@@ -7,7 +7,7 @@ import styles from './Nav.module.css'
 import { useFontContext } from '@/lib/context/FontContext'
 
 const NavBar = () => {
-    const { rale = { className: '' }, ruhl = { className: '' } } = typeof window !== 'undefined' ? useFontContext() : {};
+    const { rale, ruhl } = useFontContext()
 
     return (
         <nav>
