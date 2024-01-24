@@ -35,9 +35,9 @@ export const HeroImg = () => {
 
     return (
         <>
-            <Image alt='hero image one' src={HeroImgOne} loading='eager' className={`${styles.mySlides} ${styles.hero_img}`} width={768} height={124} />
-            <Image alt='hero image two' src={HeroImgTwo} loading='eager' className={`${styles.mySlides} ${styles.hero_img}`} width={1600} height={900} />
-            <Image alt='hero image three' src={HeroImgThree} loading='eager' className={`${styles.mySlides} ${styles.hero_img}`} width={2048} height={1536} />
+            <Image alt='hero image one' src={HeroImgOne} loading='eager' priority className={`${styles.mySlides} ${styles.hero_img}`} width={768} height={124} />
+            <Image alt='hero image two' src={HeroImgTwo} loading='eager' priority className={`${styles.mySlides} ${styles.hero_img}`} width={1600} height={900} />
+            <Image alt='hero image three' src={HeroImgThree} loading='eager' priority className={`${styles.mySlides} ${styles.hero_img}`} width={2048} height={1536} />
         </>
     )
 }
