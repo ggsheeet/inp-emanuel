@@ -1,4 +1,4 @@
-import HeroMain from '@/components/heroMain/HeroMain'
+import { HeroMain } from '@/components/heroMain'
 import { getBlogPosts } from '@/lib/contentful/contentful'
 
 export default async function Home() {

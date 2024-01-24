@@ -1,12 +1,16 @@
 import type { Metadata } from 'next'
-import Head from 'next/head';
-import NavBar from '@/components/navBar/NavBar';
-import { FontProvider } from '@/lib/context/FontContext';
+import Head from 'next/head'
+import NavBar from '@/components/navBar/NavBar'
+import { Raleway, Frank_Ruhl_Libre, Petit_Formal_Script } from 'next/font/google'
 import './globals.css'
 
 const favicon = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}logos-inp/inp-logo.png`
 
-export const generateViewport = () => 'width=device-width, initial-scale=1.0, maximum-scale=1.0';
+const rale = Raleway({ subsets: ['latin'], variable: '--font-rale' })
+const ruhl = Frank_Ruhl_Libre({ subsets: ['latin'], variable: '--font-ruhl' })
+const petit = Petit_Formal_Script({ weight: '400', subsets: ['latin'], variable: '--font-petit'})
+
+export const generateViewport = () => 'width=device-width, initial-scale=1.0, maximum-scale=1.0'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://localhost:3000'),
@@ -33,7 +37,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: favicon
-  },
+  }
 }
 
 export default function RootLayout({
@@ -43,17 +47,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <FontProvider>
       <Head>
           <meta name="viewport" content={generateViewport()} />
         </Head>
-        <body>
+        <body className={`${rale.variable} ${ruhl.variable} ${petit.variable}`}>
           <header>
             <NavBar />
           </header>
           {children}
         </body>
-      </FontProvider>
     </html>
   )
 }

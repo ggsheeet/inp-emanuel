@@ -25,12 +25,11 @@ body {
 
 nav {
   display: flex;
-  position: absolute;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: rgb(43, 46, 50, 0.7); /* #2B2E32 */
+  background-color: #212121; /* rgb(43, 46, 50, 0.7) */
   padding: 16px 40px;
   z-index: 3;
 }

@@ -1,13 +1,10 @@
-'use client'
 import React from 'react'
 import Image from 'next/image'
 import NavLink from './NavLink'
 import InpLogo from '/public/inp-main.png'
 import styles from './Nav.module.css'
-import { useFontContext } from '@/lib/context/FontContext'
 
 const NavBar = () => {
-    const { rale, ruhl } = useFontContext()
 
     return (
         <nav>
@@ -16,13 +13,13 @@ const NavBar = () => {
                     <Image src={InpLogo} alt='INP Logo' width={232} height={325} className={styles.nav_logo} />
                 </NavLink>
                 <NavLink href='/'>
-                    <div className={`${styles.nav_title} ${ruhl.className}`}>
+                    <div className={styles.nav_title}>
                         <p>Iglesia Nacional Presbiteriana</p>
                         <p>Emanuel Dios con Nostros</p>
                     </div>
                 </NavLink>
             </div>
-            <div className={`${styles.nav_menu} ${rale.className}`}>
+            <div className={styles.nav_menu}>
                 <NavLink href='/mision'>Misión</NavLink>
                 <NavLink href='/visitanos'>Visítanos</NavLink>
                 <NavLink href='/eventos'>Eventos</NavLink>
