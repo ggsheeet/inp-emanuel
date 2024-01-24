@@ -6,9 +6,9 @@ import './globals.css'
 
 const favicon = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}logos-inp/inp-logo.png`
 
-const rale = Raleway({ subsets: ['latin'], variable: '--font-rale' })
-const ruhl = Frank_Ruhl_Libre({ subsets: ['latin'], variable: '--font-ruhl' })
-const petit = Petit_Formal_Script({ weight: '400', subsets: ['latin'], variable: '--font-petit'})
+const rale = Raleway({ subsets: ['latin'], variable: '--font-rale', display: 'swap' })
+const ruhl = Frank_Ruhl_Libre({ subsets: ['latin'], variable: '--font-ruhl', display: 'swap' })
+const petit = Petit_Formal_Script({ weight: '400', subsets: ['latin'], variable: '--font-petit', display: 'swap' })
 
 export const generateViewport = () => 'width=device-width, initial-scale=1.0, maximum-scale=1.0'
 
