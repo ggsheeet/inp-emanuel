@@ -10,7 +10,7 @@ const NavBar = () => {
         <nav>
             <div className={styles.nav_title_logo}>
                 <NavLink href='/'>
-                    <Image src={InpLogo} alt='INP Logo' width={232} height={325} className={styles.nav_logo} />
+                    <Image src={InpLogo} loading='eager' priority alt='INP Logo' width={232} height={325} className={styles.nav_logo} />
                 </NavLink>
                 <NavLink href='/'>
                     <div className={styles.nav_title}>
