@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Head from 'next/head'
-import NavBar from '@/components/navBar/NavBar'
-import { Raleway, Frank_Ruhl_Libre, Petit_Formal_Script } from 'next/font/google'
+import { NavMain } from '@/components/nav'
+import { Raleway, Prata, Petit_Formal_Script } from 'next/font/google'
 import './globals.css'
 
 const favicon = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}logos-inp/inp-logo.png`
 
 const rale = Raleway({ subsets: ['latin'], variable: '--font-rale', display: 'swap' })
-const ruhl = Frank_Ruhl_Libre({ subsets: ['latin'], variable: '--font-ruhl', display: 'swap' })
+const prata = Prata({ weight: '400', subsets: ['latin'], variable: '--font-prata', display: 'swap' })
 const petit = Petit_Formal_Script({ weight: '400', subsets: ['latin'], variable: '--font-petit', display: 'swap' })
 
 export const generateViewport = () => 'width=device-width, initial-scale=1.0, maximum-scale=1.0'
@@ -50,9 +50,9 @@ export default function RootLayout({
       <Head>
           <meta name="viewport" content={generateViewport()} />
         </Head>
-        <body className={`${rale.variable} ${ruhl.variable} ${petit.variable}`}>
+        <body className={`${rale.variable} ${prata.variable} ${petit.variable}`}>
           <header>
-            <NavBar />
+            <NavMain />
           </header>
           {children}
         </body>

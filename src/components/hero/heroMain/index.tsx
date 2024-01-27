@@ -1,9 +1,8 @@
-'use client'
 import React from 'react'
-import styles from './Hero.module.css'
-import { HeroOverlay } from './heroOverlay/HeroOverlay'
-import { HeroImg } from './heroImg/HeroImg'
-import { HeroCTA } from './heroCTA/HeroCTA'
+import styles from './HeroMain.module.css'
+import { HeroOverlay } from '../heroOverlay'
+import { HeroImg } from '../heroImg'
+import { HeroCTA } from '../heroCTA'
 
 export const HeroMain = () => {
 

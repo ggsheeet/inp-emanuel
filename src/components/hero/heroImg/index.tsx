@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-import styles from './../Hero.module.css'
+import styles from './HeroImg.module.css'
 
 export const HeroImg = () => {
     const HeroImgOne = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}images-inp/front-door.jpeg`
@@ -36,7 +36,7 @@ export const HeroImg = () => {
     return (
         <>
             <Image alt='hero image one' src={HeroImgOne} loading='eager' priority className={`${styles.mySlides} ${styles.hero_img}`} width={768} height={124} />
-            <Image alt='hero image two' src={HeroImgTwo} loading='eager' priority className={`${styles.mySlides} ${styles.hero_img}`} width={1600} height={900} />
+            <Image alt='hero image two' src={HeroImgTwo} loading='eager' priority className={`${styles.mySlides}  ${styles.hero_img}`} width={1600} height={900} />
             <Image alt='hero image three' src={HeroImgThree} loading='eager' priority className={`${styles.mySlides} ${styles.hero_img}`} width={2048} height={1536} />
         </>
     )

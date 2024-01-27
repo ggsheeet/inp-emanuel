@@ -1,6 +1,6 @@
 import React from 'react'
-import { VisitButton, WatchButton } from './ButtonCTA'
-import styles from './../Hero.module.css'
+import { VisitButton, WatchButton } from './buttonCTA'
+import styles from './HeroCTA.module.css'
 
 export const HeroCTA = () => {
 

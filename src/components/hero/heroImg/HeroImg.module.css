@@ -1,0 +1,22 @@
+.hero_img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+    z-index: 1;
+    opacity: 1;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mySlides {
+    display: none;
+    animation: fade 1.5s forwards -0.3s;
+}
