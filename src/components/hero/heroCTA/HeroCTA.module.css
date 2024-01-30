@@ -11,10 +11,9 @@
     z-index: 3;
     color: #F0F0F0;
 
-    p {
+    h1 {
         font-family: var(--font-prata);
         font-size: 39px;
-        font-weight: 300;
     }
 
     span {
@@ -23,19 +22,18 @@
     }
 
     @media (max-width: 1280px) {
-        p {
-            font-size: 32px;
+        h1 {
+            font-size: 36px;
         }
 
         span {
-            font-size: 29px;
+            font-size: 33px;
         }
     }
 
     @media (max-width: 1024px) {
-        p {
+        h1 {
             font-size: 30px;
-            font-weight: 200;
         }
 
         span {
@@ -44,7 +42,7 @@
     }
 
     @media (max-width: 768px) {
-        p {
+        h1 {
             font-size: 22px;
         }
 
