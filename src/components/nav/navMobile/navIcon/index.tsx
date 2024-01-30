@@ -1,28 +1,23 @@
 'use client'
-import React, { useRef } from 'react'
+import React, { useState } from 'react'
 import { NavDrawer } from '../navDrawer'
-import iconStyles from './NavIcon.module.css'
-import drawerStyles from './../navDrawer/NavDrawer.module.css'
+import styles from './NavIcon.module.css'
 
-export const NavIcon = () => { 
-  const iconRef = useRef<HTMLDivElement>(null);
-  const drawerRef = useRef<HTMLDivElement>(null)
+export const NavIcon = () => {
+  const [openDrawer, setOpenDrawer] = useState(false)
 
-  const navIconClick = () => {
-    if (iconRef.current && drawerRef.current) {
-      iconRef.current.classList.toggle(iconStyles.change);
-      drawerRef.current.classList.toggle(drawerStyles.open);
-    }
+  const toggleDrawer = () => {
+    setOpenDrawer((prevOpenDrawer) => !prevOpenDrawer);
   };
 
   return (
     <>
-      <div className={iconStyles.nav_icon_container} onClick={() => navIconClick()} ref={iconRef}>
-        <div className={iconStyles.bar1}></div>
-        <div className={iconStyles.bar2}></div>
-        <div className={iconStyles.bar3}></div>
+      <div className={`${styles.nav_icon_container} ${openDrawer ? styles.change : ''}`} onClick={toggleDrawer}>
+        <div className={styles.bar1}></div>
+        <div className={styles.bar2}></div>
+        <div className={styles.bar3}></div>
       </div>
-      <NavDrawer ref={drawerRef} />
+      <NavDrawer isOpen={openDrawer} toggleDrawer={toggleDrawer} />
     </>
-  );
-};
+  )
+}

@@ -20,7 +20,6 @@
     width: 30%;
     align-items: center;
     column-gap: 20px;
-    z-index: 5;
 
     .nav_title_desktop {
         display: flex;

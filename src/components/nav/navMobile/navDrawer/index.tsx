@@ -1,24 +1,29 @@
-// Open logic can be found in navIcon component file
+import React from 'react'
+import Link from 'next/link'
+import { DrawerProps } from '@/types/Types'
+import styles from './NavDrawer.module.css'
 
-import React from 'react';
-import { NavLink } from '../../navLink';
-import styles from './NavDrawer.module.css';
+const navLinks = [
+  { href: '/', text: 'Inicio'},
+  { href: '/mision', text: 'Misión' },
+  { href: '/visitanos', text: 'Visítanos' },
+  { href: '/eventos', text: 'Eventos' },
+  { href: '/blog', text: 'Blog' },
+  { href: '/contacto', text: 'Contáctanos' },
+  { href: '/contribucion', text: 'Contribuir' }
+]
 
-export const NavDrawer = React.forwardRef<HTMLDivElement, {}>((_, ref) => {
+export const NavDrawer: React.FC<DrawerProps> = ({ isOpen, toggleDrawer }) => {
   return (
-    <div className={styles.drawer_container} ref={ref}>
-      <NavLink href='/mision'>Misión</NavLink>
-      <hr className={styles.solid} />
-      <NavLink href='/visitanos'>Visítanos</NavLink>
-      <hr className={styles.solid} />
-      <NavLink href='/eventos'>Eventos</NavLink>
-      <hr className={styles.solid} />
-      <NavLink href='/blog'>Blog</NavLink>
-      <hr className={styles.solid} />
-      <NavLink href='/contacto'>Contáctanos</NavLink>
-      <hr className={styles.solid} />
-      <NavLink href='/contribucion'>Contribuir</NavLink>
-      <hr className={styles.solid} />
+    <div className={`${styles.drawer_container} ${isOpen ? styles.open : ''}`}>
+      {navLinks.map((link, index) => (
+        <React.Fragment key={index}>
+          <Link href={link.href} rel='noopener noreferrer' onClick={toggleDrawer}>
+            {link.text}
+          </Link>
+          <hr className={styles.solid} />
+        </React.Fragment>
+      ))}
     </div>
-  );
-});
+  )
+}
