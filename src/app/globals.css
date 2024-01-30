@@ -20,9 +20,10 @@ body {
 }
 
 nav {
+  position: fixed;
   width: 100%;
   background-color: var(--background-scheme);
-  z-index: 3;
+  z-index: 4;
   display: flex;
   align-items: center;
   justify-content: center;

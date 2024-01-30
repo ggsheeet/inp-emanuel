@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Head from 'next/head'
+import { AOSProvider } from '@/lib/aos'
 import { NavMain } from '@/components/nav'
 import { Raleway, Prata, Petit_Formal_Script } from 'next/font/google'
 import './globals.css'
@@ -48,14 +49,15 @@ export default function RootLayout({
   return (
     <html lang="es">
       <Head>
-          <meta name="viewport" content={generateViewport()} />
-        </Head>
-        <body className={`${rale.variable} ${prata.variable} ${petit.variable}`}>
-          <header>
-            <NavMain />
-          </header>
-          {children}
-        </body>
+        <meta name="viewport" content={generateViewport()} />
+      </Head>
+      <AOSProvider />
+      <body className={`${rale.variable} ${prata.variable} ${petit.variable}`}>
+        <header>
+          <NavMain />
+        </header>
+        {children}
+      </body>
     </html>
   )
 }

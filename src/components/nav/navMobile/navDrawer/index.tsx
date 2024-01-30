@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { DrawerProps } from '@/types/Types'
+import { DrawerProps } from '@/types/globalTypes'
 import styles from './NavDrawer.module.css'
 
 const navLinks = [

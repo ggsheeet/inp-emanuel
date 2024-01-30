@@ -1,6 +1,6 @@
 import { HeroMain } from '@/components/hero'
-import { getBlogPosts } from '@/lib/contentful/contentful'
-import { BannerMain } from '@/components/banner'
+import { getBlogPosts } from '@/lib/contentful'
+import { BannerMain } from '@/components/banner/bannerMain'
 
 export default async function Home() {
   const data = await getBlogPosts()

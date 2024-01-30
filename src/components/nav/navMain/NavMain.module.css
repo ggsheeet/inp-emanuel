@@ -167,9 +167,14 @@
 }
 
 @media (max-width: 768px) {
+    .nav_container {
+        padding: 14px 40px
+    }
+
     .nav_menu {
         display: none;
     }
+    
     .nav_title_logo {
         width: 70%;
     }
