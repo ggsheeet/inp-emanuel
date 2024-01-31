@@ -1,146 +1,127 @@
-.banner_container {
+.join_us {
+    width: 40%;
+
+    h2 {
+        font-family: var(--font-prata);
+        font-size: 40px;
+    }
+}
+
+.service_hours {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: var(--foreground-scheme);
-    color: var(--background-scheme);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+    padding-left: 40px;
 
-    .banner_text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 1280px;
-        padding: 80px 0px;
+    h3 {
+        font-family: var(--font-prata);
+        font-size: 25px;
+    }
 
-        h2 {
-            font-family: var(--font-prata);
-            font-size: 40px;
-            width: 40%;
-        }
+    button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 21px;
+        border: 3px solid var(--clr-pepper);
+        background-color: var(--clr-pepper);
+        color: var(--clr-salt);
+        border-radius: 8px;
+        transition: background-color 0.2s, color 0.3s;
+        font-family: var(--font-rale);
+        font-weight: 500;
+        font-size: 20px;
 
-        .service_hours {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 40%;
-            padding-left: 40px;
-
-            h3 {
-                font-family: var(--font-prata);
-                font-size: 25px;
-            }
-
-            button {
-                display: inline-block;
-                margin-top: 20px;
-                padding: 12px 21px;
-                border: 3px solid #212121;
-                background-color: #212121;
-                color: #F0F0F0;
-                border-radius: 8px;
-                transition: background-color 0.2s, color 0.3s;
-                font-family: var(--font-rale);
-                font-weight: 500;
-                font-size: 20px;
-
-                &:hover {
-                    background-color: #F0F0F0;
-                    color: #212121;
-                }
-            }
-
-            @media (max-width: 1280px) {
-                h3 {
-                    font-size: 21px;
-                }
-
-                button {
-                    font-size: 18px;
-                    padding: 12px 19px;
-                    border: 2px solid #F0F0F0;
-                }
-            }
-
-            @media (max-width: 1024px) {
-                h3 {
-                    font-size: 18px;
-                }
-
-                button {
-                    margin-top: 16px;
-                    padding: 10px 12px;
-                    border: 2px solid #F0F0F0;
-                    font-size: 16px;
-                }
-            }
-
-            @media (max-width: 768px) {
-                h3 {
-                    font-size: 21px;
-                }
-
-                button {
-                    font-size: 134x;
-                    font-weight: 500;
-                    padding: 10px 14px;  
-                    border: none;
-                    border-radius: 4px;
-                }
-            }
-        }
-
-        @media (max-width: 1280px) {
-            h2 {
-                font-size: 32px;
-                width: 36%;
-                padding-right: 40px;
-            }
-
-            .service_hours {
-                padding-left: 60px;
-                width: 36%;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            h2 {
-                font-size: 25px;
-                width: 36.5%;
-                padding-right: 30px;
-            }
-
-            .service_hours {
-                padding-left: 55px;
-                width: 39%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            h2 {
-                font-size: 28px;
-                width: 77%;
-                padding: 0px;
-            }
-
-            .service_hours {
-                width: 77%;
-                padding: 0px
-            }
+        &:hover {
+            background-color: var(--clr-salt);
+            color: var(--clr-pepper);
         }
     }
 
     @media (max-width: 1280px) {
-        .banner_text {
-            padding: 80px 0px
+        h3 {
+            font-size: 21px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 12px 19px;
+            border: 2px solid var(--clr-salt);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        h3 {
+            font-size: 18px;
+        }
+
+        button {
+            margin-top: 16px;
+            padding: 10px 12px;
+            border: 2px solid var(--clr-salt);
+            font-size: 16px;
         }
     }
 
     @media (max-width: 768px) {
-        .banner_text {
-            flex-direction: column;
-            row-gap: 18px;
-            padding: 70px 0px
+        h3 {
+            font-size: 21px;
         }
+
+        button {
+            font-size: 134x;
+            font-weight: 500;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 4px;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .join_us {
+        width: 36%;
+        padding-right: 40px;
+
+        h2 {
+            font-size: 32px;
+        }
+    }
+
+    .service_hours {
+        padding-left: 60px;
+        width: 36%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .join_us {
+        width: 36.5%;
+        padding-right: 30px;
+
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    .service_hours {
+        padding-left: 55px;
+        width: 39%;
+    }
+}
+
+@media (max-width: 768px) {
+    .join_us {
+        width: 77%;
+        padding: 0px;
+
+        h2 {
+            font-size: 28px;
+        }
+    }
+
+    .service_hours {
+        width: 77%;
+        padding: 18px 0px 0px 0px
     }
 }

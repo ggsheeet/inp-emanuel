@@ -1,6 +1,7 @@
 import { HeroMain } from '@/components/hero'
 import { getBlogPosts } from '@/lib/contentful'
 import { BannerMain } from '@/components/banner/bannerMain'
+import { BannerReuse } from '@/components/banner/bannerReuse'
 
 export default async function Home() {
   const data = await getBlogPosts()
@@ -14,6 +15,7 @@ export default async function Home() {
         </p>
       ))} */}
       <BannerMain />
+      <BannerReuse />
     </main>
   )
 }

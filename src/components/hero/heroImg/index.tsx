@@ -4,9 +4,9 @@ import Image from 'next/image'
 import styles from './HeroImg.module.css'
 
 export const HeroImg = () => {
-    const HeroImgOne = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}images-inp/front-door.jpeg`
-    const HeroImgTwo = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}images-inp/service.jpeg`
-    const HeroImgThree = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}images-inp/kids-service.jpeg`
+    const HeroImgOne = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}images-inp/service.webp`
+    const HeroImgTwo = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}images-inp/kids-service.webp`
+    const HeroImgThree = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}images-inp/front-door.webp`
 
     useEffect(() => {
         let myIndex = 0;
@@ -35,9 +35,9 @@ export const HeroImg = () => {
 
     return (
         <>
-            <Image alt='hero image one' src={HeroImgOne} loading='eager' priority className={`${styles.mySlides} ${styles.hero_img}`} width={768} height={124} />
-            <Image alt='hero image two' src={HeroImgTwo} loading='eager' priority className={`${styles.mySlides}  ${styles.hero_img}`} width={1600} height={900} />
-            <Image alt='hero image three' src={HeroImgThree} loading='eager' priority className={`${styles.mySlides} ${styles.hero_img}`} width={2048} height={1536} />
+            <Image alt='hero image one' src={HeroImgOne} loading='eager' priority className={`${styles.mySlides} ${styles.hero_img}`} width={1600} height={900} />
+            <Image alt='hero image two' src={HeroImgTwo} loading='eager' priority className={`${styles.mySlides}  ${styles.hero_img}`} width={2048} height={1536} />
+            <Image alt='hero image three' src={HeroImgThree} loading='eager' priority className={`${styles.mySlides} ${styles.hero_img}`} width={768} height={1024} />
         </>
     )
 }

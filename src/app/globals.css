@@ -5,6 +5,8 @@
 :root {
   --foreground-scheme: #212121;
   --background-scheme: #F0F0F0;
+  --clr-salt: #F0F0F0;
+  --clr-pepper: #212121;
 }
 
 @media (prefers-color-scheme: dark) {

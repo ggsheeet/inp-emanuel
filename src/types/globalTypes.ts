@@ -7,3 +7,7 @@ export type DrawerProps = {
 	isOpen: boolean
 	toggleDrawer: () => void
 }
+
+export type WrapperProps = {
+	children: React.ReactNode
+}
