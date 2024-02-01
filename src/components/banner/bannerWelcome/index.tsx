@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import styles from './BannerReuse.module.css'
+import styles from './BannerWelcome.module.css'
 import { BannerDark } from '../bannerContainer/bannerDark'
 
 export const BannerReuse = () => {

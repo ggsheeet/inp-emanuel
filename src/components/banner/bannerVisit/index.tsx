@@ -1,6 +1,6 @@
 import React from 'react'
 import { BannerLight } from '../bannerContainer/bannerLight'
-import styles from './BannerMain.module.css'
+import styles from './BannerVisit.module.css'
 
 export const BannerMain = () => {
     return (

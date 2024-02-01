@@ -1,5 +1,6 @@
 .join_us {
     width: 40%;
+    padding-right: 20px;
 
     h2 {
         font-family: var(--font-prata);
