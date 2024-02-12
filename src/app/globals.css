@@ -7,6 +7,7 @@
   --background-scheme: #F0F0F0;
   --clr-salt: #F0F0F0;
   --clr-pepper: #212121;
+  --clr-link: #598EFF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,5 +29,12 @@ nav {
   z-index: 4;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+footer {
+  background-color: var(--background-scheme);
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
 }

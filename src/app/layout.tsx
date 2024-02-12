@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import Head from 'next/head'
 import { AOSProvider } from '@/lib/aos'
 import { NavMain } from '@/components/nav'
+import { Footer } from '@/components/footer'
 import { Raleway, Prata, Petit_Formal_Script } from 'next/font/google'
 import './globals.css'
 
@@ -10,8 +10,6 @@ const favicon = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}logos-inp/inp-logo.png`
 const rale = Raleway({ subsets: ['latin'], variable: '--font-rale', display: 'swap' })
 const prata = Prata({ weight: '400', subsets: ['latin'], variable: '--font-prata', display: 'swap' })
 const petit = Petit_Formal_Script({ weight: '400', subsets: ['latin'], variable: '--font-petit', display: 'swap' })
-
-export const generateViewport = () => 'width=device-width, initial-scale=1.0, maximum-scale=1.0'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://localhost:3000'),
@@ -48,15 +46,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <Head>
-        <meta name="viewport" content={generateViewport()} />
-      </Head>
       <AOSProvider />
       <body className={`${rale.variable} ${prata.variable} ${petit.variable}`}>
         <header>
           <NavMain />
         </header>
         {children}
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   )

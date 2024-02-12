@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { LinkProps } from '@/types/globalTypes'
+import { NavLinkProps } from '@/types/globalTypes'
 
-export const NavLink: React.FC<LinkProps> = ({ href, children }) => {
+export const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
   return (
     <Link href={href} rel='noopener noreferrer'>
       {children}
