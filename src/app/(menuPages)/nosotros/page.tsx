@@ -1,10 +1,10 @@
 import React, { use } from 'react'
 
-const Mision = () => {
+const SobreNosotros = () => {
     
   return (
     <div></div>
   )
 }
 
-export default Mision
+export default SobreNosotros

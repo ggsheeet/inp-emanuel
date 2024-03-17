@@ -2,8 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import { NavLink } from '../navLink'
 import { NavIcon } from '../navMobile/navIcon'
-import InpLogo from '/public/inp-main.png'
+import { InpLogo } from '@/components/media'
 import styles from './NavMain.module.css'
+import NavMenu from './navMenu'
 
 export const NavMain = () => {
     return (
@@ -23,14 +24,7 @@ export const NavMain = () => {
                         </div>
                     </NavLink>
                 </div>
-                <div className={styles.nav_menu}>
-                    <NavLink href='/mision'>Misión</NavLink>
-                    <NavLink href='/visitanos'>Visítanos</NavLink>
-                    <NavLink href='/eventos'>Eventos</NavLink>
-                    <NavLink href='/blog'>Blog</NavLink>
-                    <NavLink href='/contacto'>Contáctanos</NavLink>
-                    <NavLink href='/contribucion'>Contribuir</NavLink>
-                </div>
+                <NavMenu />
                 <NavIcon />
             </div>
         </nav>

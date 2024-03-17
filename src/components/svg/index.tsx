@@ -64,7 +64,7 @@ export const FacebookSvg = () => (
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMinYMin"
-        className="w-6 h-6 md:w-[2.0625rem] md:h-[2.0625rem] fill-brand-foreground md:hover:fill-brand-link"
+        className="w-6 h-6 md:w-[33px] md:h-[33px] fill-brand-foreground md:hover:fill-brand-link"
         stroke="#223874"
         strokeWidth={0.00024000000000000003}
     >

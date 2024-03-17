@@ -3,7 +3,7 @@ const cspHeader = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline';
     style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data: ${process.env.NEXT_PUBLIC_S3_BUCKET_URL};
+    img-src 'self' blob: data: images.ctfassets.net ${process.env.NEXT_PUBLIC_S3_BUCKET_URL};
     font-src 'self';
     object-src 'none';
     base-uri 'self';
@@ -31,6 +31,10 @@ const nextConfig = {
 			{
 				protocol: 'https',
 				hostname: 'inp-emmanuel.s3.us-east-2.amazonaws.com'
+			},
+			{
+				protocol: 'https',
+				hostname: 'images.ctfassets.net'
 			}
 		]
 	}

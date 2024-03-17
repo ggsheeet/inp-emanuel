@@ -16,6 +16,8 @@ const config: Config = {
       colors: {
 				'brand-foreground': 'var(--foreground-scheme)',
         'brand-background': 'var(--background-scheme)',
+        'brand-salt': 'var(--clr-salt)',
+        'brand-pepper': 'var(--clr-pepper)',
         'brand-link': 'var(--clr-link)'
       }
     },

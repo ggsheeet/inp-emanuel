@@ -2,7 +2,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #212121;
+    background-color: var(--clr-pepper);
     opacity: 0.6;
     z-index: 2;
 }
