@@ -113,6 +113,7 @@
 				font-family: var(--font-urbanist);
 				font-size: 17px;
 				text-align: center;
+				row-gap: 5px;
 
 				.event_day {
 					display: flex;
