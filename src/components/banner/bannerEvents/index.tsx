@@ -8,7 +8,7 @@ import styles from './BannerEvents.module.css'
 export const BannerEvents = async () => {
 	const data = await getEvents()
 
-    const eventDateTime = (item: MappedItemProps) => {
+	const eventDateTime = (item: MappedItemProps) => {
 		if (item.startDate === item.endDate && item.startTime === item.endTime) {
 			return (
 				<>
@@ -20,7 +20,10 @@ export const BannerEvents = async () => {
 					</div>
 				</>
 			)
-		} else if (item.startDate === item.endDate && item.startTime !== item.endTime) {
+		} else if (
+			item.startDate === item.endDate &&
+			item.startTime !== item.endTime
+		) {
 			return (
 				<>
 					<div className={styles.event_day}>
@@ -28,8 +31,8 @@ export const BannerEvents = async () => {
 					</div>
 					<div className={styles.event_time}>
 						<p className='w-[30%] md:w-1/3'>{item.startTime}</p>
-                        {' — '}
-                        <p className='w-[30%] md:w-1/3'>{item.endTime}</p>
+						{' — '}
+						<p className='w-[30%] md:w-1/3'>{item.endTime}</p>
 					</div>
 				</>
 			)
@@ -38,12 +41,12 @@ export const BannerEvents = async () => {
 				<>
 					<div className={styles.event_day}>
 						<p className='w-1/3'>{item.startDate}</p>
-                        {' ＿ '}
+						{' ＿ '}
 						<p className='w-1/3'>{item.endDate}</p>
 					</div>
 					<div className={styles.event_time}>
 						<p className='w-[43%]'>{item.startTime}</p>
-                        {'  '}
+						{'  '}
 						<p className='w-[41%]'>{item.endTime}</p>
 					</div>
 				</>
@@ -59,19 +62,19 @@ export const BannerEvents = async () => {
 
 	return (
 		<BannerGeneralLight>
-            <div className={styles.banner_title}>
-                <h3>Eventos</h3>
-                <button>Ver todos <i className={styles.arrow} /></button>
-            </div>
+			<div className={styles.banner_title}>
+				<h3>Eventos</h3>
+				<button>
+					Ver todos <i className={styles.arrow} />
+				</button>
+			</div>
 			<div className={styles.banner_events}>
 				{data?.map((item: MappedItemProps, index: number) => (
 					<React.Fragment key={index}>
 						<div className={styles.events_card}>
 							<div className={styles.event_text}>
 								<p className={styles.event_title}>{item.title}</p>
-								<div className={styles.event_date}>
-                                    {eventDateTime(item)}
-								</div>
+								<div className={styles.event_date}>{eventDateTime(item)}</div>
 							</div>
 							{item.thumbnail && (
 								<>

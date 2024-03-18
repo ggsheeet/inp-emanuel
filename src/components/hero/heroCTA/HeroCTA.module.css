@@ -1,93 +1,92 @@
 /* Hero text styles */
 
 .hero_text {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, -50%);
-    z-index: 3;
-    color: var(--clr-salt);
+	display: flex;
+	flex-direction: column;
+	row-gap: 2vh;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-100%, -50%);
+	z-index: 3;
+	color: var(--clr-salt);
 
-    h1 {
-        font-family: var(--font-prata);
-        font-size: 39px;
-    }
+	h1 {
+		font-family: var(--font-prata);
+		font-size: 39px;
+	}
 
-    span {
-        font-family: var(--font-petit);
-        font-size: 35px;
-    }
+	span {
+		font-family: var(--font-petit);
+		font-size: 35px;
+	}
 
-    @media (max-width: 1280px) {
-        h1 {
-            font-size: 36px;
-        }
+	@media (max-width: 1280px) {
+		h1 {
+			font-size: 36px;
+		}
 
-        span {
-            font-size: 33px;
-        }
-    }
+		span {
+			font-size: 33px;
+		}
+	}
 
-    @media (max-width: 1024px) {
-        h1 {
-            font-size: 30px;
-        }
+	@media (max-width: 1024px) {
+		h1 {
+			font-size: 30px;
+		}
 
-        span {
-            font-size: 27px;
-        }
-    }
+		span {
+			font-size: 27px;
+		}
+	}
 
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 24px;
-        }
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 24px;
+		}
 
-        span {
-            font-size: 22px;
-        }
-    }
-
+		span {
+			font-size: 22px;
+		}
+	}
 }
 
 .button_group {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    column-gap: 7%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	column-gap: 7%;
 }
 
 /* Media breakpoints */
 
 @media (max-width: 1280px) {
-    .hero_text {
-        transform: translate(-50%, -50%);
-        width: 80%;
-        row-gap: 3vh;
-    }
+	.hero_text {
+		transform: translate(-50%, -50%);
+		width: 80%;
+		row-gap: 3vh;
+	}
 
-    .button_group {
-        column-gap: 5%;
-    }
+	.button_group {
+		column-gap: 5%;
+	}
 }
 
 @media (max-width: 1024px) {
-    .hero_text {
-        transform: translate(-50%, -50%);
-        width: 80%;
-        row-gap: 3vh;
-    }
+	.hero_text {
+		transform: translate(-50%, -50%);
+		width: 80%;
+		row-gap: 3vh;
+	}
 
-    .button_group {
-        column-gap: 5%;
-    }
+	.button_group {
+		column-gap: 5%;
+	}
 }
 
 @media (max-width: 768px) {
-    .hero_text {
-        transform: translate(-50%, -50%);
-    }
+	.hero_text {
+		transform: translate(-50%, -50%);
+	}
 }

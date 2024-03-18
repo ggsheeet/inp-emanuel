@@ -1,16 +1,16 @@
 /* Main classes for hero */
 
 .hero_container {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 81vh;
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 81vh;
 }
 
 /*  Media breakpoints */
 
 @media (max-width: 768px) {
-    .hero_container {
-        height: 72vh;
-    }
+	.hero_container {
+		height: 72vh;
+	}
 }

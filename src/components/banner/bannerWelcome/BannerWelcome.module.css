@@ -1,156 +1,156 @@
 .banner_text {
-    width: 40%;
-    padding-right: 20px;
+	width: 40%;
+	padding-right: 20px;
 
-    h3 {
-        font-family: var(--font-prata);
-        font-size: 24px;
-        text-align: flex-start;
-        padding-top: 1vh;
-    }
+	h3 {
+		font-family: var(--font-prata);
+		font-size: 24px;
+		text-align: flex-start;
+		padding-top: 1vh;
+	}
 
-    h4 {
-        font-family: var(--font-rale);
-        font-size: 20px;
-        text-align: flex-start;
-        color: #909090;
-    }
+	h4 {
+		font-family: var(--font-rale);
+		font-size: 20px;
+		text-align: flex-start;
+		color: #909090;
+	}
 
-    p {
-        font-size: 17px;
-        text-align: flex-start;
-        padding-top: 2vh;
-    }
+	p {
+		font-size: 17px;
+		text-align: flex-start;
+		padding-top: 2vh;
+	}
 
-    button {
-        display: inline-block;
-        margin-top: 1.5vh;
-        padding: 12px 21px;
-        border: 3px solid var(--clr-salt);
-        background-color: var(--clr-pepper);
-        color: var(--clr-salt);
-        border-radius: 8px;
-        transition: background-color 0.2s, color 0.3s;
-        font-family: var(--font-rale);
-        font-weight: 500;
-        font-size: 20px;
+	button {
+		display: inline-block;
+		margin-top: 1.5vh;
+		padding: 12px 21px;
+		border: 3px solid var(--clr-salt);
+		background-color: var(--clr-pepper);
+		color: var(--clr-salt);
+		border-radius: 8px;
+		transition: background-color 0.2s, color 0.3s;
+		font-family: var(--font-rale);
+		font-weight: 500;
+		font-size: 20px;
 
-        &:hover {
-            background-color: var(--clr-salt);
-            color: var(--clr-pepper);
-        }
-    }
+		&:hover {
+			background-color: var(--clr-salt);
+			color: var(--clr-pepper);
+		}
+	}
 
-    @media (max-width: 1280px) {
-        h3 {
-            font-size: 20px;
-        }
+	@media (max-width: 1280px) {
+		h3 {
+			font-size: 20px;
+		}
 
-        h4 {
-            font-size: 17px;
-        }
+		h4 {
+			font-size: 17px;
+		}
 
-        p {
-            font-size: 14px;
-            text-align: flex-start;
-            padding-top: 1vh;
-        }
+		p {
+			font-size: 14px;
+			text-align: flex-start;
+			padding-top: 1vh;
+		}
 
-        button {
-            font-size: 15px;
-            padding: 10px 14px;
-            border: 2px solid var(--clr-salt);
-        }
-    }
+		button {
+			font-size: 15px;
+			padding: 10px 14px;
+			border: 2px solid var(--clr-salt);
+		}
+	}
 
-    @media (max-width: 1024px) {
-        h3 {
-            font-size: 16px;
-        }
+	@media (max-width: 1024px) {
+		h3 {
+			font-size: 16px;
+		}
 
-        h4 {
-            font-size: 14px;
-        }
+		h4 {
+			font-size: 14px;
+		}
 
-        p {
-            font-size: 12px;
-            text-align: flex-start;
-            padding-top: 1vh;
-        }
+		p {
+			font-size: 12px;
+			text-align: flex-start;
+			padding-top: 1vh;
+		}
 
-        button {
-            font-size: 14px;
-            padding: 9px 12px;
-            border: 2px solid var(--clr-salt);
-        }
-    }
+		button {
+			font-size: 14px;
+			padding: 9px 12px;
+			border: 2px solid var(--clr-salt);
+		}
+	}
 
-    @media (max-width: 768px) {
-        h4 {
-            padding-top: 2vh;
-        }
+	@media (max-width: 768px) {
+		h4 {
+			padding-top: 2vh;
+		}
 
-        p {
-            font-size: 15px;
-        }
+		p {
+			font-size: 15px;
+		}
 
-        button {
-            font-size: 16px;
-            font-weight: 500;
-            border-radius: 4px;
+		button {
+			font-size: 16px;
+			font-weight: 500;
+			border-radius: 4px;
 
-            &:hover {
-                background-color: inherit;
-                color: inherit;
-            }
-        }
-    }
+			&:hover {
+				background-color: inherit;
+				color: inherit;
+			}
+		}
+	}
 }
 
 .banner_img {
-    width: 40%;
-    height: auto;
-    padding-left: 40px;
+	width: 40%;
+	height: auto;
+	padding-left: 40px;
 
-    img {
-        border-radius: 8px;
-    }
+	img {
+		border-radius: 8px;
+	}
 }
 
 @media (max-width: 1280px) {
-    .banner_text {
-        width: 36%;
-        padding-right: 40px;
-    }
+	.banner_text {
+		width: 36%;
+		padding-right: 40px;
+	}
 
-    .banner_img {
-        padding-left: 60px;
-        width: 36%;
-    }
+	.banner_img {
+		padding-left: 60px;
+		width: 36%;
+	}
 }
 
 @media (max-width: 1024px) {
-    .banner_text {
-        width: 40%;
-        padding-right: 10px;
-    }
+	.banner_text {
+		width: 40%;
+		padding-right: 10px;
+	}
 
-    .banner_img {
-        padding-left: 40px;
-        width: 40%;
-    }
+	.banner_img {
+		padding-left: 40px;
+		width: 40%;
+	}
 }
 
 @media (max-width: 768px) {
-    .banner_text {
-        width: 77%;
-        padding: 0px;
-        order: 2;
-    }
+	.banner_text {
+		width: 77%;
+		padding: 0px;
+		order: 2;
+	}
 
-    .banner_img {
-        width: 77%;
-        padding-left: 0px;
-        order: 1;
-    }
+	.banner_img {
+		width: 77%;
+		padding-left: 0px;
+		order: 1;
+	}
 }

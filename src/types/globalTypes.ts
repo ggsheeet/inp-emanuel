@@ -61,9 +61,9 @@ export type MappedItemProps = {
 	endTime: string
 	location: string
 	thumbnail: {
-        description: string;
-        url: string;
-        width: number;
-        height: number;
-    } | null;
+		description: string
+		url: string
+		width: number
+		height: number
+	} | null
 }

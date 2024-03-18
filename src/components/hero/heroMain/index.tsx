@@ -5,12 +5,11 @@ import { HeroImg } from '../heroImg'
 import { HeroCTA } from '../heroCTA'
 
 export const HeroMain = () => {
-
-    return (
-        <div className={styles.hero_container}>
-            <HeroImg />
-            <HeroOverlay />
-            <HeroCTA />
-        </div>
-    )
+	return (
+		<div className={styles.hero_container}>
+			<HeroImg />
+			<HeroOverlay />
+			<HeroCTA />
+		</div>
+	)
 }

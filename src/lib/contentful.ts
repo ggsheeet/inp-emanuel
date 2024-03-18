@@ -39,40 +39,44 @@ export const getEvents = async () => {
 		const assetMap = new Map<string, AssetProps>(
 			data.includes.Asset.map((asset: AssetProps) => [asset.sys.id, asset])
 		)
-	
+
 		// Map items and their corresponding assets together
 		const mappedData = data.items.map((item: ItemProps) => {
-			const { fields } = item;
-		
-			const thumbnailId = fields.thumbnail.sys.id;
-			const thumbnailAsset = assetMap.get(thumbnailId);
-		
+			const { fields } = item
+
+			const thumbnailId = fields.thumbnail.sys.id
+			const thumbnailAsset = assetMap.get(thumbnailId)
+
 			// Extract thumbnail information
 			const thumbnailInfo = thumbnailAsset
 				? {
-					description: thumbnailAsset.fields.description,
-					url: thumbnailAsset.fields.file.url,
-					width: thumbnailAsset.fields.file.details.image.width,
-					height: thumbnailAsset.fields.file.details.image.height
+						description: thumbnailAsset.fields.description,
+						url: thumbnailAsset.fields.file.url,
+						width: thumbnailAsset.fields.file.details.image.width,
+						height: thumbnailAsset.fields.file.details.image.height
 				  }
-				: null;
-		
-			const startDate = new Date(fields.startTime);
-			const endDate = new Date(fields.endTime);
-		
+				: null
+
+			const startDate = new Date(fields.startTime)
+			const endDate = new Date(fields.endTime)
+
 			const options: Intl.DateTimeFormatOptions = {
 				month: 'long', // 'long' for full name (e.g., "abril")
-				day: 'numeric',
-			};
-		
-			const dateFormat = new Intl.DateTimeFormat('es-ES', options);
-			const timeFormat = new Intl.DateTimeFormat('es-ES', { hour: 'numeric', minute: 'numeric', hour12: true });
-		
-			const formattedStartDate = dateFormat.format(startDate);
-			const formattedStartTime = timeFormat.format(startDate);
-			const formattedEndDate = dateFormat.format(endDate);
-			const formattedEndTime = timeFormat.format(endDate);
-		
+				day: 'numeric'
+			}
+
+			const dateFormat = new Intl.DateTimeFormat('es-ES', options)
+			const timeFormat = new Intl.DateTimeFormat('es-ES', {
+				hour: 'numeric',
+				minute: 'numeric',
+				hour12: true
+			})
+
+			const formattedStartDate = dateFormat.format(startDate)
+			const formattedStartTime = timeFormat.format(startDate)
+			const formattedEndDate = dateFormat.format(endDate)
+			const formattedEndTime = timeFormat.format(endDate)
+
 			return {
 				title: fields.title,
 				startDate: formattedStartDate,
@@ -82,8 +86,8 @@ export const getEvents = async () => {
 				description: fields.description,
 				location: fields.location,
 				thumbnail: thumbnailInfo
-			};
-		});
+			}
+		})
 		return mappedData
 	} catch (error) {
 		console.error('Error fetching events:', error)

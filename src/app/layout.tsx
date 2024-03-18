@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 				height: 630
 			}
 		],
-		url: 'http://localhost:3000',
+		url: 'http://inp-emanuel.vercel.app',
 		type: 'website'
 	},
 	alternates: {
@@ -68,7 +68,9 @@ export default function RootLayout({
 	return (
 		<html lang='es'>
 			<AOSProvider />
-			<body className={`${rale.variable} ${prata.variable} ${petit.variable} ${urbanist.variable}`}>
+			<body
+				className={`${rale.variable} ${prata.variable} ${petit.variable} ${urbanist.variable}`}
+			>
 				<header>
 					<NavMain />
 				</header>

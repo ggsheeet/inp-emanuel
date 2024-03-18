@@ -1,129 +1,129 @@
 .join_us {
-    width: 40%;
-    padding-right: 20px;
+	width: 40%;
+	padding-right: 20px;
 
-    h2 {
-        font-family: var(--font-prata);
-        font-size: 40px;
-    }
+	h2 {
+		font-family: var(--font-prata);
+		font-size: 40px;
+	}
 }
 
 .service_hours {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 40%;
-    padding-left: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 40%;
+	padding-left: 40px;
 
-    h3 {
-        font-family: var(--font-prata);
-        font-size: 25px;
-    }
+	h3 {
+		font-family: var(--font-prata);
+		font-size: 25px;
+	}
 
-    button {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 12px 21px;
-        border: 3px solid var(--clr-pepper);
-        background-color: var(--clr-pepper);
-        color: var(--clr-salt);
-        border-radius: 8px;
-        transition: background-color 0.2s, color 0.3s;
-        font-family: var(--font-rale);
-        font-weight: 500;
-        font-size: 20px;
+	button {
+		display: inline-block;
+		margin-top: 20px;
+		padding: 12px 21px;
+		border: 3px solid var(--clr-pepper);
+		background-color: var(--clr-pepper);
+		color: var(--clr-salt);
+		border-radius: 8px;
+		transition: background-color 0.2s, color 0.3s;
+		font-family: var(--font-rale);
+		font-weight: 500;
+		font-size: 20px;
 
-        &:hover {
-            background-color: var(--clr-salt);
-            color: var(--clr-pepper);
-        }
-    }
+		&:hover {
+			background-color: var(--clr-salt);
+			color: var(--clr-pepper);
+		}
+	}
 
-    @media (max-width: 1280px) {
-        h3 {
-            font-size: 21px;
-        }
+	@media (max-width: 1280px) {
+		h3 {
+			font-size: 21px;
+		}
 
-        button {
-            font-size: 18px;
-            padding: 10px 14px;
-        }
-    }
+		button {
+			font-size: 18px;
+			padding: 10px 14px;
+		}
+	}
 
-    @media (max-width: 1024px) {
-        h3 {
-            font-size: 18px;
-        }
+	@media (max-width: 1024px) {
+		h3 {
+			font-size: 18px;
+		}
 
-        button {
-            margin-top: 16px;
-            padding: 9px 12px;
-            font-size: 16px;
-        }
-    }
+		button {
+			margin-top: 16px;
+			padding: 9px 12px;
+			font-size: 16px;
+		}
+	}
 
-    @media (max-width: 768px) {
-        h3 {
-            font-size: 21px;
-        }
+	@media (max-width: 768px) {
+		h3 {
+			font-size: 21px;
+		}
 
-        button {
-            font-size: 16px;
-            font-weight: 500;
-            border-radius: 4px;
+		button {
+			font-size: 16px;
+			font-weight: 500;
+			border-radius: 4px;
 
-            &:hover {
-                background-color: var(--clr-pepper);
-                color: var(--clr-salt);
-            }
-        }
-    }
+			&:hover {
+				background-color: var(--clr-pepper);
+				color: var(--clr-salt);
+			}
+		}
+	}
 }
 
 @media (max-width: 1280px) {
-    .join_us {
-        width: 36%;
-        padding-right: 40px;
+	.join_us {
+		width: 36%;
+		padding-right: 40px;
 
-        h2 {
-            font-size: 32px;
-        }
-    }
+		h2 {
+			font-size: 32px;
+		}
+	}
 
-    .service_hours {
-        padding-left: 60px;
-        width: 36%;
-    }
+	.service_hours {
+		padding-left: 60px;
+		width: 36%;
+	}
 }
 
 @media (max-width: 1024px) {
-    .join_us {
-        width: 36.5%;
-        padding-right: 30px;
+	.join_us {
+		width: 36.5%;
+		padding-right: 30px;
 
-        h2 {
-            font-size: 25px;
-        }
-    }
+		h2 {
+			font-size: 25px;
+		}
+	}
 
-    .service_hours {
-        padding-left: 55px;
-        width: 39%;
-    }
+	.service_hours {
+		padding-left: 55px;
+		width: 39%;
+	}
 }
 
 @media (max-width: 768px) {
-    .join_us {
-        width: 77%;
-        padding: 0px;
+	.join_us {
+		width: 77%;
+		padding: 0px;
 
-        h2 {
-            font-size: 28px;
-        }
-    }
+		h2 {
+			font-size: 28px;
+		}
+	}
 
-    .service_hours {
-        width: 77%;
-        padding: 18px 0px 0px 0px
-    }
+	.service_hours {
+		width: 77%;
+		padding: 18px 0px 0px 0px;
+	}
 }
