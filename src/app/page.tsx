@@ -1,7 +1,7 @@
 import { HeroMain } from '@/components/hero/heroMain'
-import { BannerMain } from '@/components/banner/bannerVisit'
-import { BannerReuse } from '@/components/banner/bannerWelcome'
-import { BannerGrid } from '@/components/banner/bannerGrid'
+import { BannerMain } from '@/components/banner/bannersMain/bannerVisit'
+import { BannerReuse } from '@/components/banner/bannersMain/bannerWelcome'
+import { BannerGrid } from '@/components/banner/bannersMain/bannerGrid'
 
 export default async function Home() {
 	return (

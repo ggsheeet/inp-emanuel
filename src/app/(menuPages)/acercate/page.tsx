@@ -1,10 +1,10 @@
 import React, { use } from 'react'
 
-const Acercate = () => {
+const Connect = () => {
     
   return (
     <div></div>
   )
 }
 
-export default Acercate
+export default Connect

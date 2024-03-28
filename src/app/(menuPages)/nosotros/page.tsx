@@ -1,10 +1,13 @@
-import React, { use } from 'react'
+import React from 'react'
+import BannerIntro from '@/components/banner/bannersOther/bannersAboutUs/bannerIntro'
 
-const SobreNosotros = () => {
+const AboutUs = () => {
     
   return (
-    <div></div>
+    <>
+    <BannerIntro />
+    </>
   )
 }
 
-export default SobreNosotros
+export default AboutUs

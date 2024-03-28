@@ -3,7 +3,7 @@ export const menuLinks = [
 	{ name: 'Acércate', href: '/acercate' },
 	{ name: 'Eventos', href: '/eventos' },
 	{ name: 'Blog', href: '/blog' },
-	{ name: 'Contribuir', href: '/contribucion' }
+	{ name: 'Planea Tu Visita', href: '/visita' }
 ]
 
 export const mobileLinks = [
@@ -12,7 +12,7 @@ export const mobileLinks = [
 	{ name: 'Acércate', href: '/acercate' },
 	{ name: 'Eventos', href: '/eventos' },
 	{ name: 'Blog', href: '/blog' },
-	{ name: 'Contribuir', href: '/contribucion' }
+	{ name: 'Planea Tu Visita', href: '/visita' }
 ]
 
 export const heroMainImgs = [
@@ -67,10 +67,10 @@ export const heroOtherImgs = [
 	},
 	{
 		src: `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}heros-inp/contribute.webp`,
-		alt: 'contribucion',
+		alt: 'visita',
 		width: 800,
 		height: 400,
-		href: '/contribucion'
+		href: '/visita'
 	}
 ]
 
@@ -79,5 +79,5 @@ export const heroOtherNames = [
 	{ name: 'Acércate', href: '/acercate' },
 	{ name: 'Eventos', href: '/eventos' },
 	{ name: 'Blog', href: '/blog' },
-	{ name: 'Apoya Nuestra Iglesia', href: '/contribucion' }
+	{ name: 'Visítanos', href: '/visita' }
 ]

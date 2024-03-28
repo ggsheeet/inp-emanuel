@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Contribute = () => {
+const Visit = () => {
   return (
     <div></div>
   )
 }
 
-export default Contribute
+export default Visit
