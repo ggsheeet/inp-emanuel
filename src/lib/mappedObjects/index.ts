@@ -1,6 +1,6 @@
 export const menuLinks = [
 	{ name: 'Sobre Nosotros', href: '/nosotros' },
-	{ name: 'Visítanos', href: '/visitanos' },
+	{ name: 'Acércate', href: '/acercate' },
 	{ name: 'Eventos', href: '/eventos' },
 	{ name: 'Blog', href: '/blog' },
 	{ name: 'Contribuir', href: '/contribucion' }
@@ -9,7 +9,7 @@ export const menuLinks = [
 export const mobileLinks = [
 	{ name: 'Inicio', href: '/' },
 	{ name: 'Sobre Nosotros', href: '/nosotros' },
-	{ name: 'Visítanos', href: '/visitanos' },
+	{ name: 'Acércate', href: '/acercate' },
 	{ name: 'Eventos', href: '/eventos' },
 	{ name: 'Blog', href: '/blog' },
 	{ name: 'Contribuir', href: '/contribucion' }
@@ -46,10 +46,10 @@ export const heroOtherImgs = [
 	},
 	{
 		src: `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}heros-inp/visit.webp`,
-		alt: 'visitanos',
+		alt: 'acercate',
 		width: 1600,
 		height: 1066,
-		href: '/visitanos'
+		href: '/acercate'
 	},
 	{
 		src: `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}heros-inp/events.webp`,
@@ -76,7 +76,7 @@ export const heroOtherImgs = [
 
 export const heroOtherNames = [
 	{ name: 'Nosotros', href: '/nosotros' },
-	{ name: 'Visítanos', href: '/visitanos' },
+	{ name: 'Acércate', href: '/acercate' },
 	{ name: 'Eventos', href: '/eventos' },
 	{ name: 'Blog', href: '/blog' },
 	{ name: 'Apoya Nuestra Iglesia', href: '/contribucion' }

@@ -1,10 +1,10 @@
 import React, { use } from 'react'
 
-const Visitanos = () => {
+const Acercate = () => {
     
   return (
     <div></div>
   )
 }
 
-export default Visitanos
+export default Acercate
