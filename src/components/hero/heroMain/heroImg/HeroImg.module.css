@@ -1,6 +1,7 @@
 .hero_img {
 	width: 100%;
 	height: 100%;
+	min-height: 81vh;
 	object-fit: cover;
 	object-position: 50% 30%;
 	z-index: 1;
@@ -20,4 +21,10 @@
 .mySlides {
 	display: none;
 	animation: fade 1.5s forwards -0.3s;
+}
+
+@media (max-width: 768px) {
+	.hero_img {
+		min-height: 72vh;
+	}
 }

@@ -2,9 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 import styles from './BannerWelcome.module.css'
 import { BannerDark } from '../bannerContainer/bannerDark'
+import { WelcomeImg } from '@/components/media'
 
 export const BannerReuse = () => {
-	const BannerImg = `${process.env.NEXT_PUBLIC_S3_BUCKET_URL}images-inp/inside.webp`
+	
 	return (
 		<BannerDark>
 			<div className={styles.banner_text}>
@@ -24,7 +25,7 @@ export const BannerReuse = () => {
 			<div className={styles.banner_img}>
 				<Image
 					alt='banner img one'
-					src={BannerImg}
+					src={WelcomeImg}
 					width={1600}
 					height={1200}
 				/>

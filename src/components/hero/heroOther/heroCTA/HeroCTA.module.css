@@ -1,0 +1,97 @@
+/* Hero text styles */
+
+.hero_text {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2vh;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -30%);
+	z-index: 3;
+	width: 80%;
+	color: var(--clr-salt);
+
+	h1 {
+		font-family: var(--font-prata);
+		font-size: 45px;
+		animation: zoom-in 0.4s ease forwards;
+		text-align: center;
+	}
+
+	span {
+		font-family: var(--font-petit);
+		font-size: 35px;
+	}
+
+	@keyframes zoom-in {
+        from {
+            opacity: 0.8;
+            transform: scale(0.72);
+        }
+
+        to {
+            opacity: 1; 
+            transform: scale(1);
+        }
+    }
+
+	@media (max-width: 1280px) {
+		h1 {
+			font-size: 40px;
+		}
+
+		span {
+			font-size: 33px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		h1 {
+			font-size: 36px;
+		}
+
+		span {
+			font-size: 27px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 30px;
+		}
+
+		span {
+			font-size: 22px;
+		}
+	}
+}
+
+.button_group {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	column-gap: 7%;
+}
+
+/* Media breakpoints */
+
+@media (max-width: 1280px) {
+	.hero_text {
+		row-gap: 3vh;
+	}
+
+	.button_group {
+		column-gap: 5%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.hero_text {
+		row-gap: 3vh;
+	}
+
+	.button_group {
+		column-gap: 5%;
+	}
+}
