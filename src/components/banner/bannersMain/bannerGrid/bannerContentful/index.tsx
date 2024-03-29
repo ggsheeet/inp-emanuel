@@ -24,9 +24,21 @@ export const BannerContentful = ({ type }: { type: string }) => {
 		setCurrentIndex(index)
 	}
 
+	const debounce = (func: Function, delay: number) => {
+        let timeoutId: NodeJS.Timeout
+        return function(this: any, ...args: any[]) {
+            clearTimeout(timeoutId)
+            timeoutId = setTimeout(() => func.apply(this, args), delay)
+        }
+    }
+
 	const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
 		setStartX(e.touches[0].clientX)
 	}
+
+	const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+        e.preventDefault()
+    }
 
 	const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
 		const endX = e.changedTouches[0].clientX
@@ -38,6 +50,9 @@ export const BannerContentful = ({ type }: { type: string }) => {
 			setCurrentIndex((prevIndex) => prevIndex - 1)
 		}
 	}
+
+	const debouncedTouchStart = debounce(handleTouchStart, 500)
+    const debouncedTouchEnd = debounce(handleTouchEnd, 500)
 
 	const getViewport = (width: number) => {
 		if (width >= 1280) {
@@ -153,8 +168,9 @@ export const BannerContentful = ({ type }: { type: string }) => {
 							{data?.map((item: MappedItemProps, index: number) => (
 								<React.Fragment key={index}>
 									<div
-										onTouchStart={handleTouchStart}
-										onTouchEnd={handleTouchEnd}
+										onTouchStart={debouncedTouchStart}
+										onTouchMove={handleTouchMove}
+										onTouchEnd={debouncedTouchEnd}
 										className={styles.content_card}
 										style={{
 											transform: `translateX(-${currentIndex * 109.5}%)`
