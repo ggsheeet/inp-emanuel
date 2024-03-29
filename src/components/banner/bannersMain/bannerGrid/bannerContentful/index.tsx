@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { useData } from '@/lib/context'
 import { MappedItemProps } from '@/types/globalTypes'
@@ -12,6 +12,9 @@ export const BannerContentful = ({ type }: { type: string }) => {
 
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [numPages, setNumPages] = useState(0)
+	const [startX, setStartX] = useState(0)
+
+	const sliderRef = useRef<HTMLDivElement>(null)
 
 	const itemsPerPage = {
 		desktop: 3,
@@ -21,6 +24,21 @@ export const BannerContentful = ({ type }: { type: string }) => {
 
 	const handleDotClick = (index: number) => {
 		setCurrentIndex(index)
+	}
+
+	const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+		setStartX(e.touches[0].clientX)
+	}
+
+	const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+		const endX = e.changedTouches[0].clientX
+		const deltaX = startX - endX
+		const threshold = 50
+		if (deltaX > threshold && currentIndex < numPages - 1) {
+			setCurrentIndex((prevIndex) => prevIndex + 1)
+		} else if (deltaX < -threshold && currentIndex > 0) {
+			setCurrentIndex((prevIndex) => prevIndex - 1)
+		}
 	}
 
 	const getViewport = (width: number) => {
@@ -122,7 +140,12 @@ export const BannerContentful = ({ type }: { type: string }) => {
 				</button>
 			</div>
 			<div className={styles.banner_content}>
-				<div className={styles.banner_slider}>
+				<div
+					ref={sliderRef}
+					onTouchStart={handleTouchStart}
+					onTouchEnd={handleTouchEnd}
+					className={styles.banner_slider}
+				>
 					{loading ? (
 						<>
 							{[...Array(3)].map((_, index) => (
