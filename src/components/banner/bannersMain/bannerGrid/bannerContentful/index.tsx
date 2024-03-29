@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useData } from '@/lib/context'
 import { MappedItemProps } from '@/types/globalTypes'
@@ -13,8 +13,6 @@ export const BannerContentful = ({ type }: { type: string }) => {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [numPages, setNumPages] = useState(0)
 	const [startX, setStartX] = useState(0)
-
-	const sliderRef = useRef<HTMLDivElement>(null)
 
 	const itemsPerPage = {
 		desktop: 3,
@@ -33,7 +31,7 @@ export const BannerContentful = ({ type }: { type: string }) => {
 	const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
 		const endX = e.changedTouches[0].clientX
 		const deltaX = startX - endX
-		const threshold = 50
+		const threshold = 70
 		if (deltaX > threshold && currentIndex < numPages - 1) {
 			setCurrentIndex((prevIndex) => prevIndex + 1)
 		} else if (deltaX < -threshold && currentIndex > 0) {
@@ -140,12 +138,7 @@ export const BannerContentful = ({ type }: { type: string }) => {
 				</button>
 			</div>
 			<div className={styles.banner_content}>
-				<div
-					ref={sliderRef}
-					onTouchStart={handleTouchStart}
-					onTouchEnd={handleTouchEnd}
-					className={styles.banner_slider}
-				>
+				<div className={styles.banner_slider}>
 					{loading ? (
 						<>
 							{[...Array(3)].map((_, index) => (
@@ -160,6 +153,8 @@ export const BannerContentful = ({ type }: { type: string }) => {
 							{data?.map((item: MappedItemProps, index: number) => (
 								<React.Fragment key={index}>
 									<div
+										onTouchStart={handleTouchStart}
+										onTouchEnd={handleTouchEnd}
 										className={styles.content_card}
 										style={{
 											transform: `translateX(-${currentIndex * 109.5}%)`
