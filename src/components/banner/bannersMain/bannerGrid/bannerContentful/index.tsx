@@ -13,7 +13,6 @@ export const BannerContentful = ({ type }: { type: string }) => {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [numPages, setNumPages] = useState(0)
 	const [startX, setStartX] = useState(0)
-	const [isDragging, setIsDragging] = useState(false)
 
 	const itemsPerPage = {
 		desktop: 3,
@@ -25,49 +24,20 @@ export const BannerContentful = ({ type }: { type: string }) => {
 		setCurrentIndex(index)
 	}
 
-	const debounce = (func: Function, delay: number) => {
-		let timeoutId: NodeJS.Timeout
-		return function (this: any, ...args: any[]) {
-			clearTimeout(timeoutId)
-			timeoutId = setTimeout(() => func.apply(this, args), delay)
-		}
-	}
-
 	const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
 		setStartX(e.touches[0].clientX)
-		setIsDragging(true)
 	}
-
-	useEffect(() => {
-		const handleTouchMove = (e: TouchEvent) => {
-			if (isDragging) {
-				e.preventDefault(); // Prevent vertical scrolling during touch move
-			}
-		};
-	
-		if (isDragging) {
-			document.addEventListener('touchmove', handleTouchMove, { passive: false });
-		}
-	
-		return () => {
-			document.removeEventListener('touchmove', handleTouchMove);
-		};
-	}, [isDragging]);
 
 	const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
 		const endX = e.changedTouches[0].clientX
 		const deltaX = startX - endX
-		const threshold = 70
+		const threshold = 50
 		if (deltaX > threshold && currentIndex < numPages - 1) {
 			setCurrentIndex((prevIndex) => prevIndex + 1)
 		} else if (deltaX < -threshold && currentIndex > 0) {
 			setCurrentIndex((prevIndex) => prevIndex - 1)
 		}
-		setIsDragging(false)
 	}
-
-	const debouncedTouchStart = debounce(handleTouchStart, 500)
-	const debouncedTouchEnd = debounce(handleTouchEnd, 500)
 
 	const getViewport = (width: number) => {
 		if (width >= 1280) {
@@ -183,11 +153,12 @@ export const BannerContentful = ({ type }: { type: string }) => {
 							{data?.map((item: MappedItemProps, index: number) => (
 								<React.Fragment key={index}>
 									<div
-										onTouchStart={debouncedTouchStart}
-										onTouchEnd={debouncedTouchEnd}
+										onTouchStart={handleTouchStart}
+										onTouchEnd={handleTouchEnd}
 										className={styles.content_card}
 										style={{
-											transform: `translateX(-${currentIndex * 109.5}%)`
+											transform: `translateX(-${currentIndex * 109.5}%)`,
+											touchAction: 'none'
 										}}
 									>
 										{type === 'events' ? (
