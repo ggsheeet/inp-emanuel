@@ -7,7 +7,7 @@ export const BannerGrid = async () => {
 	return (
 		<DataProvider>
 			<BannerGeneralLight>
-				<BannerContentful type='events' />
+				{/* <BannerContentful type='events' /> */}
 				<BannerContentful type='blog' />
 			</BannerGeneralLight>
 		</DataProvider>
