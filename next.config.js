@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const cspHeader = `
     default-src 'self';
-	connect-src https://cdn.contentful.com ws://localhost:3000;;
+	connect-src https://cdn.contentful.com https://inp-emanuel.vercel.app ws://localhost:3000;;
     script-src 'self' 'unsafe-eval' 'unsafe-inline';
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data: images.ctfassets.net ${process.env.NEXT_PUBLIC_S3_BUCKET_URL};
